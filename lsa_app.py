@@ -20,8 +20,6 @@ fig = px.bar(df, x="Fruit", y="Amount", color="City", barmode="group")
 
 # Create the layout
 lsa_app.layout = html.Div(children=[
-    # Provide a title for each chart
-    html.H1(children='Chart title goes here'),
 
     # Display each chart
     dcc.Graph(
@@ -42,7 +40,23 @@ lsa_app.layout = html.Div(children=[
         'address a question, several visualisations may be needed to answer a question more fully.'),
     html.P('Explain why you chose that particular visualisation.'),
     html.P('Reflect on the extent to which your visualisation helps to answer the question.'),
-    html.P('Suggest any ways in which your visualisation could be improved or what you might do differently.')
+    html.P('Suggest any ways in which your visualisation could be improved or what you might do differently.'),
+
+    # Provide the references used in your explanation/evaluation
+    html.H2(children='References'),
+    html.P(
+        'Add your references here using the reference style you are used to using in your department or any at use in '
+        'UCL.'),
+    dcc.Link(html.A('UCL reference styles'),
+             href='https://library-guides.ucl.ac.uk/referencing-plagiarism/referencing-styles'),
+    html.Br(),
+    html.Br(),
+    html.Ol(children=[
+        html.Li('Ronson, J. (2012). The psychopath test: a journey through the madness industry. London: Picador.'),
+        html.Li(
+            'Skelton, A. (2011). ‘Value conflicts in higher education teaching’, Teaching in Higher Education, 17(3), '
+            'pp.257-268. doi: 10.1080/13562517.2011.611875.'),
+    ])
 ])
 
 if __name__ == '__main__':

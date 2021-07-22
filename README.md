@@ -5,10 +5,11 @@ You should already know how to do the following if you completed the Moodle cour
 - Create a project in your IDE (e.g. PyCharm) by cloning the repository from GitHub. 
 - Create a venv in your project. 
 - Install the requirements from requirements.txt. 
+- •	Place a copy of your data set in the `data` directory of the project structure. 
 
 ## Code structure
-- `data` save your data files (likely .csv) or database to this directory
-- `assets` is optional and can be used for additional files such as .jpg, .png
+- `data` save your data files (likely `.csv` format) to this directory
+- `assets` is optional and can be used for additional files such as image files (.jpg, .png, etc)
 - `lsa_app.py` configures and creates the Dash app, you will need to edit this with your own Dash code
 - `requirements.txt` contains the libraries you will need to install for the app to run. 
 
